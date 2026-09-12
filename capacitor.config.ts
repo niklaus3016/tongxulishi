@@ -4,9 +4,7 @@ const config: CapacitorConfig = {
   appId: 'com.tongxulishi.app',
   appName: '通序历史',
   webDir: 'dist',
-  server: {
-    androidScheme: 'https'
-  }
+  android: {}
 };
 
 export default config;
