@@ -1,0 +1,13 @@
+{
+  "name": "通序历史",
+  "short_name": "通序历史",
+  "id": "com.tongxulishi.app",
+  "package_name": "com.tongxulishi.app",
+  "version": "v1.0",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121214",
+  "theme_color": "#121214",
+  "description": "纯离线沉浸式中国历史通识工具，全景时间线、历代朝代库、帝王谱系、历史大事记与交互知识图谱"
+}

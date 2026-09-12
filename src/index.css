@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    color-scheme: dark;
+    background-color: #121214;
+    overflow-x: hidden;
+  }
+  body {
+    background-color: #121214;
+    color: #e4e4e7;
+    font-family: -apple-system, BlinkMacSystemFont, "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", "STSong", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    overflow-x: hidden;
+  }
+}
+
+/* Globally suppress all desktop scrollbars across all elements for a clean mobile native app feel */
+html, body, #root, * {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* 弹窗入场动画（tailwindcss-animate 的等价轻量实现） */
+@keyframes tx-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes tx-slide-in-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-in {
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+}
+
+.animate-in.fade-in {
+  animation-name: tx-fade-in;
+}
+
+.animate-in.slide-in-from-bottom {
+  animation-name: tx-slide-in-from-bottom;
+}
